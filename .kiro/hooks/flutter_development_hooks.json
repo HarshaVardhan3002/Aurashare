@@ -1,0 +1,61 @@
+{
+  "name": "Flutter Development Hooks",
+  "description": "Automated hooks for Flutter app development workflow",
+  "hooks": [
+    {
+      "name": "Project Initialization",
+      "trigger": {
+        "type": "project_init",
+        "patterns": ["pubspec.yaml"]
+      },
+      "action": {
+        "type": "agent_execution",
+        "prompt": "Scaffold a complete Flutter project structure for AuraSync photo sharing app. Create the following structure:\n\n- lib/features/ with auth, join_event, gallery, upload, profile folders\n- lib/core/ with services, theme, utils folders\n- lib/widgets/ for reusable components\n- lib/data/ with models and repositories\n- Set up Firebase configuration files\n- Create basic routing structure\n- Add essential dependencies to pubspec.yaml\n\nFocus on clean architecture and MVP-ready structure."
+      }
+    },
+    {
+      "name": "Screen Generation Theme Defaults",
+      "trigger": {
+        "type": "file_create",
+        "patterns": ["**/screens/*.dart", "**/pages/*.dart"]
+      },
+      "action": {
+        "type": "agent_execution",
+        "prompt": "Apply AuraSync theme defaults to this new screen:\n\n- Use Material3 design principles\n- Apply clean, minimal design with blur-based overlays\n- Use rounded card corners and smooth transitions\n- Implement proper spacing and typography using app theme\n- Add floating CTAs where appropriate\n- Ensure responsive design for various screen sizes\n- Include proper AppBar styling with custom_app_bar widget"
+      }
+    },
+    {
+      "name": "Apple UI Snippets Injection",
+      "trigger": {
+        "type": "file_create",
+        "patterns": ["**/widgets/*.dart", "**/components/*.dart"]
+      },
+      "action": {
+        "type": "agent_execution",
+        "prompt": "Inject Apple-inspired UI patterns into this Flutter widget:\n\n- Add smooth, natural animations and micro-interactions\n- Implement iOS-style blur effects and translucency\n- Use subtle shadows and depth\n- Apply proper haptic feedback where appropriate\n- Ensure gesture-based interactions feel natural\n- Add proper accessibility support\n- Use system fonts and native-feeling spacing"
+      }
+    },
+    {
+      "name": "Route Authentication Guard",
+      "trigger": {
+        "type": "file_modify",
+        "patterns": ["**/routes/*.dart", "**/routing/*.dart", "**/main.dart"]
+      },
+      "action": {
+        "type": "agent_execution",
+        "prompt": "Validate and add authentication guards to new routes:\n\n- Check if route requires event join status\n- Implement proper navigation guards for protected screens\n- Add anonymous auth validation where needed\n- Ensure proper redirect logic for unauthenticated users\n- Validate QR/PIN access for event-specific routes\n- Add proper error handling for auth failures\n- Implement deep linking protection"
+      }
+    },
+    {
+      "name": "Asset Blur Background Optimization",
+      "trigger": {
+        "type": "file_create",
+        "patterns": ["assets/images/*", "assets/**/*.png", "assets/**/*.jpg", "assets/**/*.jpeg"]
+      },
+      "action": {
+        "type": "agent_execution",
+        "prompt": "Optimize newly imported assets for blur background usage:\n\n- Generate blur variants of images for background use\n- Optimize image sizes for mobile performance\n- Create responsive image variants (1x, 2x, 3x)\n- Add proper image caching configuration\n- Ensure images work well with overlay content\n- Generate placeholder blur hashes for loading states\n- Update asset references in pubspec.yaml\n- Add proper image compression for cloud storage"
+      }
+    }
+  ]
+}
