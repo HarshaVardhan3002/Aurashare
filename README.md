@@ -106,6 +106,14 @@ lib/
 3. Make your changes
 4. Submit a pull request
 
+## Images/Videos Demo
+<img width="1907" height="983" alt="Screenshot 2025-08-02 212910" src="https://github.com/user-attachments/assets/e7145a59-122f-420f-8fab-11758a2ca2f5" />
+
+
+
+https://github.com/user-attachments/assets/456f0c2a-436d-41e2-a36e-3fc5050255eb
+
+
 ---
 
 **AuraSync**: The easiest group photo sync app for real-life events, focused on instant QR-based joining, uploading to a shared cloud gallery, and zero login friction. ⚡
